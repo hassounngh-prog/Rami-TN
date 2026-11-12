@@ -99,13 +99,7 @@ namespace Rami.Rules
 
             var deck = new List<Card>(Deck.CreateDeck());
             var rng = new Random(seed);
-            for (int i = deck.Count - 1; i > 0; i--)
-            {
-                int j = rng.Next(i + 1);
-                var swap = deck[i];
-                deck[i] = deck[j];
-                deck[j] = swap;
-            }
+            Deck.Shuffle(deck, rng);
 
             int largerSize = rng.Next(57, 108);
             bool chosenFirst = rng.Next(2) == 0;

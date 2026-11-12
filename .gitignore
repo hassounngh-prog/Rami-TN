@@ -1,0 +1,19 @@
+# Unity generated
+Library/
+Temp/
+Obj/
+Logs/
+Build/
+Builds/
+UserSettings/
+
+# .NET / IDE
+bin/
+obj/
+.vs/
+*.user
+
+# Secrets / local artifacts
+.env
+.env.*
+.scratch/

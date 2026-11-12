@@ -91,8 +91,8 @@ Laying down valid combinations in one turn whose combined value meets the curren
 _Avoid_: Accumulating the qualifying total across several turns.
 
 **Shared minimum**:
-The qualifying drop threshold, initially selected as 51, 61, or 71 and raised after a qualifying drop to that drop's total value plus one for every player's next new-combination drop, including players who already dropped earlier in the hand.
-_Avoid_: A separate threshold for each player, an exemption for later small new-combination drops, or the cumulative match target.
+The qualifying drop threshold, initially selected as 51, 61, or 71 and raised after a qualifying drop to that drop's total value plus one for every player's next new-combination drop, including players who already dropped earlier in the hand. Each new hand resets it to the initially selected value; escalation lasts only for that hand (owner decision, feature 3a scope).
+_Avoid_: A separate threshold for each player, an exemption for later small new-combination drops, the cumulative match target, or escalation carried over from one hand to the next.
 
 **First-place eligibility**:
 Unless the complete action wins immediately, a player who has not dropped must actually lay down qualifying combinations before performing ordinary place on existing table combinations.

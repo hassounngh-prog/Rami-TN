@@ -7,7 +7,7 @@ Private online Tunisian Rami for exactly four human players, individual (Solo) a
 | # | Feature | Blocked by | Status |
 |---|---|---|---|
 | 1 | [Deck, cut & deal](specs/0001-deck-cut-deal.md) | none | done |
-| 2 | Combinations & card values | 1 | planned |
+| 2 | [Combinations & card values](specs/0002-combinations-card-values.md) | 1 | done |
 | 3 | Turn flow & actions — Solo hand `full` | 1, 2 | planned · needs spec |
 | 4 | Scoring & match — Solo | 3 | planned |
 | 5 | Local playable table | 3, 4 | planned · needs spec |
@@ -32,10 +32,12 @@ Intent: decide which card groups are legal and what they are worth.
 
 Done when: the validator accepts/rejects msaker and ma7loul (including Jokers and the six-card split) and computes combination and remaining-card values per rulebook + glossary, verified by tests.
 
-- [ ] msaker: 3–4 same rank, distinct suits
-- [ ] ma7loul: 3–5 consecutive same suit; 1 low/high; special 1–K–Q–J–10; no K–1–2 wrap; six-card split into two 3s
-- [ ] Joker substitution + limits (msaker ≤3, ma7loul ≤4, ≥1 real card); declared bottom-to-top order fixes represented ranks/values
-- [ ] Context-dependent values (1 low = 1, 1 high/msaker = 10, faces = 10, Joker = represented; uncombined 1 = 1, uncombined Joker 10 Solo / 20 2v2)
+- [x] msaker: 3–4 same rank, distinct suits
+- [x] ma7loul: 3–5 consecutive same suit; 1 low/high; Ace-high 1–K–Q / 1–K–Q–J / 1–K–Q–J–10 only (1 at bottom); no K–1–2 wrap; 6+ run split into valid 3–5-card groups, player-declared (six → two 3s)
+- [x] Joker substitution + limits (msaker ≤3, ma7loul ≤4, ≥1 real card); declared bottom-to-top order fixes represented ranks/values
+- [x] Context-dependent values (1 low = 1, 1 high/msaker = 10, faces = 10, Joker = represented; uncombined 1 = 1, uncombined Joker 10 Solo / 20 2v2)
+
+§5.2 ma7loul detail (Ace-high forms, long-run splitting) resolved by owner decision — see glossary `ma7loul` and `Long-run split`. Contract and confirmed seams: spec 0002.
 
 ## 3. Turn flow & actions — Solo hand `full`
 

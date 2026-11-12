@@ -29,6 +29,8 @@ namespace Rami.Rules
 
         public static Card Joker(BackColour back) => new Card(null, null, back);
 
+        internal static int FaceValue(Rank rank) => (int)rank <= 10 ? (int)rank : 10;
+
         public bool Equals(Card other) =>
             !ReferenceEquals(other, null) && Suit == other.Suit && Rank == other.Rank && Back == other.Back;
 

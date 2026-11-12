@@ -51,12 +51,16 @@ A valid combination of three or four cards of the same rank using different suit
 _Avoid_: Repeated suits within one combination or a requirement to match card-back colours.
 
 **ma7loul**:
-A valid combination of three to five consecutive ranks in one suit, allowing 1 at the low or high end but never a King–1–2 wraparound.
-_Avoid_: Unlimited-length runs or treating 1 as both high and low within the same sequence.
+A valid combination of three to five consecutive ranks in one suit, allowing 1 at the low or high end but never a King–1–2 wraparound. The only Ace-high forms are 1–K–Q, 1–K–Q–J, and 1–K–Q–J–10 (bottom-to-top, 1 at the bottom), each counting 1 as 10; holding the 9 alongside 1–K–Q–J–10 forces a split rather than extending the high run (owner decision, feature 2 scope).
+_Avoid_: Unlimited-length runs, treating 1 as both high and low within the same sequence, or any Ace-high form other than those three prefixes.
 
 **Six-card split**:
 Six consecutive cards of one suit must be divided into two valid three-card ma7loul combinations, including when an eligible place action adds a sixth card to a five-card table sequence.
 _Avoid_: Keeping a six-card sequence as one table combination.
+
+**Long-run split**:
+A same-suit run of six or more cards is divided into valid three-to-five-card ma7loul combinations, and the player declares the partition (owner decision, feature 2 scope); six cards form two threes as in the six-card split. The partition never changes the run's total value.
+_Avoid_: A forced canonical split, keeping any run over five as one combination, or a group smaller than three or larger than five.
 
 **Joker**:
 A substitute for a specific missing card in a valid msaker or ma7loul, valued as that represented card when included in a combination, with identical rules for red-backed and blue-backed Jokers.
@@ -67,7 +71,7 @@ A msaker may use up to three Jokers and a ma7loul up to four, but every combinat
 _Avoid_: Joker-only combinations, a one-Joker limit, or exceeding the combination size.
 
 **Bottom-to-top sequence order**:
-The player chooses the valid arrangement, which determines Joker values: 6 below four Jokers scores 6 + 7 + 8 + 9 + 10 = 40, four Jokers below 6 score 2 + 3 + 4 + 5 + 6 = 20, and a natural 1–2–3 is displayed with 1 at the bottom, 2 above it, and 3 above 2.
+The player chooses the valid arrangement, which determines Joker values: 6 below four Jokers scores 6 + 7 + 8 + 9 + 10 = 40, four Jokers below 6 score 2 + 3 + 4 + 5 + 6 = 20, and a natural 1–2–3 is displayed with 1 at the bottom, 2 above it, and 3 above 2. In an Ace-high ma7loul the 1 sits at the bottom, then K, Q, J, 10 going up (1–K–Q–J–10).
 _Avoid_: Automatically choosing the highest-value interpretation or changing a Joker's represented rank after the combination has been dropped.
 
 **Declared sequence**:
